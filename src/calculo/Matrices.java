@@ -17,6 +17,7 @@ public class Matrices extends javax.swing.JDialog {
     /**
      * Creates new form Matrices
      */
+    int contador_estado_matriz=0;
     public Matrices(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
@@ -35,31 +36,25 @@ public class Matrices extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
-        tbl_matriz_original = new javax.swing.JTable();
+        jPanel1 = new javax.swing.JPanel();
         btn_add_fila = new javax.swing.JButton();
         btn_eliminar_fila = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         tbl_matriz_resultado = new javax.swing.JTable();
-        btn_escalar = new javax.swing.JButton();
         btn_rotar = new javax.swing.JButton();
         btn_trasladar = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tbl_matriz_original = new javax.swing.JTable();
+        btn_escalar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        tbl_matriz_original.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
-        tbl_matriz_original.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null},
-                {null, null}
-            },
-            new String [] {
-                "Eje X", "Eje Y"
-            }
-        ));
-        tbl_matriz_original.setRowHeight(22);
-        jScrollPane1.setViewportView(tbl_matriz_original);
+        jPanel1.setBackground(new java.awt.Color(40, 40, 40));
+        jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        btn_add_fila.setBackground(new java.awt.Color(81, 156, 254));
+        btn_add_fila.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        btn_add_fila.setForeground(new java.awt.Color(255, 255, 255));
         btn_add_fila.setText("Add fila");
         btn_add_fila.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -67,6 +62,9 @@ public class Matrices extends javax.swing.JDialog {
             }
         });
 
+        btn_eliminar_fila.setBackground(new java.awt.Color(81, 156, 254));
+        btn_eliminar_fila.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        btn_eliminar_fila.setForeground(new java.awt.Color(255, 255, 255));
         btn_eliminar_fila.setText("Eliminar");
         btn_eliminar_fila.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -86,13 +84,9 @@ public class Matrices extends javax.swing.JDialog {
         tbl_matriz_resultado.setRowHeight(22);
         jScrollPane2.setViewportView(tbl_matriz_resultado);
 
-        btn_escalar.setText("Escalar");
-        btn_escalar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_escalarActionPerformed(evt);
-            }
-        });
-
+        btn_rotar.setBackground(new java.awt.Color(81, 156, 254));
+        btn_rotar.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        btn_rotar.setForeground(new java.awt.Color(255, 255, 255));
         btn_rotar.setText("Rotar");
         btn_rotar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -100,6 +94,9 @@ public class Matrices extends javax.swing.JDialog {
             }
         });
 
+        btn_trasladar.setBackground(new java.awt.Color(81, 156, 254));
+        btn_trasladar.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        btn_trasladar.setForeground(new java.awt.Color(255, 255, 255));
         btn_trasladar.setText("Trasladar");
         btn_trasladar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -107,49 +104,82 @@ public class Matrices extends javax.swing.JDialog {
             }
         });
 
+        tbl_matriz_original.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
+        tbl_matriz_original.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null},
+                {null, null}
+            },
+            new String [] {
+                "Eje X", "Eje Y"
+            }
+        ));
+        tbl_matriz_original.setRowHeight(22);
+        jScrollPane1.setViewportView(tbl_matriz_original);
+
+        btn_escalar.setBackground(new java.awt.Color(81, 156, 254));
+        btn_escalar.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        btn_escalar.setForeground(new java.awt.Color(255, 255, 255));
+        btn_escalar.setText("Escalar");
+        btn_escalar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_escalarActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(57, 57, 57)
+                        .addComponent(btn_add_fila)
+                        .addGap(18, 18, 18)
+                        .addComponent(btn_eliminar_fila))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(9, 9, 9)
+                        .addComponent(btn_escalar)
+                        .addGap(26, 26, 26)
+                        .addComponent(btn_rotar)
+                        .addGap(26, 26, 26)
+                        .addComponent(btn_trasladar))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 308, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(83, 83, 83)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 308, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(47, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btn_add_fila)
+                    .addComponent(btn_eliminar_fila))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btn_rotar)
+                    .addComponent(btn_trasladar)
+                    .addComponent(btn_escalar))
+                .addContainerGap(21, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(77, 77, 77)
-                        .addComponent(btn_add_fila)
-                        .addGap(18, 18, 18)
-                        .addComponent(btn_eliminar_fila))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(btn_escalar)
-                                .addGap(35, 35, 35)
-                                .addComponent(btn_rotar)
-                                .addGap(26, 26, 26)
-                                .addComponent(btn_trasladar))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 308, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(83, 83, 83)
-                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 308, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(37, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(33, 33, 33)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btn_add_fila)
-                    .addComponent(btn_eliminar_fila))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btn_escalar)
-                    .addComponent(btn_rotar)
-                    .addComponent(btn_trasladar))
-                .addContainerGap(39, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -182,31 +212,72 @@ public class Matrices extends javax.swing.JDialog {
         // TODO add your handling code here:
         //btn escalar
         
-        int escalar = Integer.parseInt(JOptionPane.showInputDialog("Inserta un escalar"));
+        if(contador_estado_matriz!=0){
+            this.tbl_matriz_resultado.removeAll();
+        }
+        String escala="";
+        
+        while(escala.isEmpty()){
+            escala=JOptionPane.showInputDialog("Inserta un escalar");
+        }
+        int escalar = Integer.parseInt(escala);
         //gualamos la matriz principal con la matriz resultado
         igualar_tamaño_matrices();
         //llamamos al metodo escalar
         int filas = this.tbl_matriz_original.getRowCount();
         escalar(filas, escalar);
+        contador_estado_matriz++;
     }//GEN-LAST:event_btn_escalarActionPerformed
 
     private void btn_rotarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_rotarActionPerformed
         // TODO add your handling code here:
+        if(contador_estado_matriz!=0){
+            this.tbl_matriz_resultado.removeAll();
+        }
         //boton para rotar la matriz
-        int angulo = Integer.parseInt(JOptionPane.showInputDialog("Inserta el angulo para rotar ").toString());
-        int filas = this.tbl_matriz_original.getRowCount();
-        igualar_tamaño_matrices();//igualamos el tamaño de las matrices
-        //llamamos al metodo para rotar
-        rotar(angulo, filas);
+        String ANGULO="";
+        while(ANGULO.isEmpty()){
+            ANGULO=JOptionPane.showInputDialog("Inserta el angulo para rotar ");
+        }
+        try{
+            int angulo = Integer.parseInt(ANGULO);
+            int filas = this.tbl_matriz_original.getRowCount();
+            igualar_tamaño_matrices();//igualamos el tamaño de las matrices
+            //llamamos al metodo para rotar
+            rotar(angulo, filas);
+            contador_estado_matriz++;
+        }catch(Exception ex){
+            JOptionPane.showMessageDialog(null,"Ha ocurrido un Error , Intenta de nuevo "+ ex);
+        }
+        
     }//GEN-LAST:event_btn_rotarActionPerformed
 
     private void btn_trasladarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_trasladarActionPerformed
         // TODO add your handling code here:
-        int trasladar_X=Integer.parseInt(JOptionPane.showInputDialog("Trasladar en X"));
-        int trasladar_Y=Integer.parseInt(JOptionPane.showInputDialog("Trasladar en Y"));
-        //mandamos a llamar el metodo de traslacion
-        igualar_tamaño_matrices();
-        trasladar(trasladar_X,trasladar_Y);
+        if(contador_estado_matriz!=0){
+            this.tbl_matriz_resultado.removeAll();
+        }
+        String X="";
+        String Y="";
+        while(X.isEmpty()){
+            X=JOptionPane.showInputDialog("Trasladar en X");
+        }
+        while(Y.isEmpty()){
+            Y=JOptionPane.showInputDialog("Trasladar en Y");
+        }
+        
+        
+        try{
+            int trasladar_X=Integer.parseInt(X);
+            int trasladar_Y=Integer.parseInt(Y);
+            //mandamos a llamar el metodo de traslacion
+            igualar_tamaño_matrices();
+            trasladar(trasladar_X,trasladar_Y);
+            contador_estado_matriz++;
+        }catch(Exception ex){
+            JOptionPane.showMessageDialog(null,"Ha ocurrido un Error , Intenta de nuevo "+ ex);
+        }
+        
     }//GEN-LAST:event_btn_trasladarActionPerformed
 
     /**
@@ -266,7 +337,7 @@ public class Matrices extends javax.swing.JDialog {
 
             for (int j = 0; j < 2; j++) {
 
-                this.tbl_matriz_resultado.setValueAt(matriz_usuario[i][j], i, j);
+                this.tbl_matriz_resultado.setValueAt(matriz_resultado[i][j], i, j);//mostramos la matriz resultado
 
             }
         }
@@ -340,6 +411,7 @@ public class Matrices extends javax.swing.JDialog {
     private javax.swing.JButton btn_escalar;
     private javax.swing.JButton btn_rotar;
     private javax.swing.JButton btn_trasladar;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     public javax.swing.JTable tbl_matriz_original;
