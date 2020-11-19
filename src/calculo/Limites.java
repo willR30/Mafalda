@@ -274,6 +274,9 @@ public class Limites extends javax.swing.JDialog {
         
         this.jep.addStandardFunctions();
         this.jep.addStandardConstants();
+        this.jep.setAllowUndeclared(true);//permitimos variables que no se hallan declarado
+        this.jep.setAllowAssignment(true);//valores sin declarar
+        this.jep.setImplicitMul(true);//agregamos reglas estandar de diferenciacion
         this.jep.addVariable("x",x);
         this.jep.parseExpression(expresion);
         resultado = this.jep.getValue();
