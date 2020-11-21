@@ -17,7 +17,8 @@ public class Matrices extends javax.swing.JDialog {
     /**
      * Creates new form Matrices
      */
-    int contador_estado_matriz=0;
+    int contador_estado_matriz = 0;
+
     public Matrices(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
@@ -132,25 +133,27 @@ public class Matrices extends javax.swing.JDialog {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(26, 26, 26)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(57, 57, 57)
-                        .addComponent(btn_add_fila)
-                        .addGap(18, 18, 18)
-                        .addComponent(btn_eliminar_fila))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(9, 9, 9)
-                        .addComponent(btn_escalar)
                         .addGap(26, 26, 26)
-                        .addComponent(btn_rotar)
-                        .addGap(26, 26, 26)
-                        .addComponent(btn_trasladar))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 308, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(83, 83, 83)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 308, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(47, Short.MAX_VALUE))
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 308, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(230, 230, 230)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(48, 48, 48)
+                                .addComponent(btn_add_fila)
+                                .addGap(18, 18, 18)
+                                .addComponent(btn_eliminar_fila))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(btn_escalar)
+                                .addGap(26, 26, 26)
+                                .addComponent(btn_rotar)
+                                .addGap(26, 26, 26)
+                                .addComponent(btn_trasladar)))))
+                .addContainerGap(43, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -186,7 +189,7 @@ public class Matrices extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_add_filaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_add_filaActionPerformed
-        // TODO add your handling code here:}
+         // TODO add your handling code here:}
         //agregar fila a la matriz principal
         DefaultTableModel model = (DefaultTableModel) this.tbl_matriz_original.getModel();
         model.addRow(new Object[]{"", "", ""});
@@ -212,99 +215,99 @@ public class Matrices extends javax.swing.JDialog {
         // TODO add your handling code here:
         //btn escalar
         
-        if(contador_estado_matriz!=0){
+        if (contador_estado_matriz != 0) {
             this.tbl_matriz_resultado.removeAll();
         }
-        String escala="";
-        
-        while(escala.isEmpty()){
-            escala=JOptionPane.showInputDialog("Inserta un escalar");
+        String escala = "";//esta variable guarda el escalar
+
+        while (escala.isEmpty()) {//validamo si la variable esta bacia
+            escala = JOptionPane.showInputDialog("Inserta un escalar");
         }
-        int escalar = Integer.parseInt(escala);
+        int escalar = Integer.parseInt(escala);//hacemos un parseo de la variable
         //gualamos la matriz principal con la matriz resultado
-        igualar_tamaño_matrices();
+        igualar_tamaño_matrices();//este metodo iguala de tamaño las matrices
         //llamamos al metodo escalar
-        int filas = this.tbl_matriz_original.getRowCount();
-        escalar(filas, escalar);
+        int filas = this.tbl_matriz_original.getRowCount();//obtenemos cuantas filas tiene la matriz original
+        escalar(filas, escalar);//llamamos al metodo escalar
         contador_estado_matriz++;
     }//GEN-LAST:event_btn_escalarActionPerformed
 
     private void btn_rotarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_rotarActionPerformed
         // TODO add your handling code here:
-        if(contador_estado_matriz!=0){
+        if (contador_estado_matriz != 0) {
             this.tbl_matriz_resultado.removeAll();
         }
         //boton para rotar la matriz
-        String ANGULO="";
-        while(ANGULO.isEmpty()){
-            ANGULO=JOptionPane.showInputDialog("Inserta el angulo para rotar ");
+        String ANGULO = "";
+        while (ANGULO.isEmpty()) {
+            ANGULO = JOptionPane.showInputDialog("Inserta el angulo para rotar ");
         }
-        try{
+        try {
             int angulo = Integer.parseInt(ANGULO);
             int filas = this.tbl_matriz_original.getRowCount();
             igualar_tamaño_matrices();//igualamos el tamaño de las matrices
             //llamamos al metodo para rotar
             rotar(angulo, filas);
             contador_estado_matriz++;
-        }catch(Exception ex){
-            JOptionPane.showMessageDialog(null,"Ha ocurrido un Error , Intenta de nuevo "+ ex);
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(null, "Ha ocurrido un Error , Intenta de nuevo " + ex);
         }
-        
+
     }//GEN-LAST:event_btn_rotarActionPerformed
 
     private void btn_trasladarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_trasladarActionPerformed
         // TODO add your handling code here:
-        if(contador_estado_matriz!=0){
+        if (contador_estado_matriz != 0) {
             this.tbl_matriz_resultado.removeAll();
         }
-        String X="";
-        String Y="";
-        while(X.isEmpty()){
-            X=JOptionPane.showInputDialog("Trasladar en X");
+        String X = "";
+        String Y = "";
+        while (X.isEmpty()) {
+            X = JOptionPane.showInputDialog("Trasladar en X");
         }
-        while(Y.isEmpty()){
-            Y=JOptionPane.showInputDialog("Trasladar en Y");
+        while (Y.isEmpty()) {
+            Y = JOptionPane.showInputDialog("Trasladar en Y");
         }
-        
-        
-        try{
-            int trasladar_X=Integer.parseInt(X);
-            int trasladar_Y=Integer.parseInt(Y);
+
+        try {
+            int trasladar_X = Integer.parseInt(X);
+            int trasladar_Y = Integer.parseInt(Y);
             //mandamos a llamar el metodo de traslacion
             igualar_tamaño_matrices();
-            trasladar(trasladar_X,trasladar_Y);
+            trasladar(trasladar_X, trasladar_Y);
             contador_estado_matriz++;
-        }catch(Exception ex){
-            JOptionPane.showMessageDialog(null,"Ha ocurrido un Error , Intenta de nuevo "+ ex);
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(null, "Ha ocurrido un Error , Intenta de nuevo " + ex);
         }
-        
+
     }//GEN-LAST:event_btn_trasladarActionPerformed
 
     /**
      * @param args the command line arguments
      */
-    public void limpiar_matriz(){
-        int filas=this.tbl_matriz_resultado.getRowCount();
-        
-        for(int i=filas;i>0;i--){
-            this.tbl_matriz_resultado.remove(filas-1);
+    public void limpiar_matriz() {
+        int filas = this.tbl_matriz_resultado.getRowCount();
+
+        for (int i =0; i < 0; i++) {
+            this.tbl_matriz_resultado.remove(i);
         }
     }
-    public void trasladar(int x,int y){
-        int filas=this.tbl_matriz_original.getRowCount();
+
+    public void trasladar(int x, int y) {//guardamos las coordenadas a mover
+        int filas = this.tbl_matriz_original.getRowCount();
         for (int i = 0; i < filas; i++) {
 
             for (int j = 0; j < 2; j++) {
-                if(j==0){
+                if (j == 0) {
                     this.tbl_matriz_resultado.setValueAt(Integer.parseInt(this.tbl_matriz_original.getValueAt(i, j).toString()) + x, i, j);
-                }else{
+                } else {
                     this.tbl_matriz_resultado.setValueAt(Integer.parseInt(this.tbl_matriz_original.getValueAt(i, j).toString()) + y, i, j);
                 }
-                
 
             }
         }
     }
+
     public void rotar(int angulo_rotacion, int filas) {
         float[][] matriz_rotacion = new float[2][2];//declaramos la matriz con la que se rota
         float[][] matriz_usuario = new float[this.tbl_matriz_original.getRowCount()][2];
@@ -324,8 +327,8 @@ public class Matrices extends javax.swing.JDialog {
             }
         }
         //rotamos la matriz 
-        for (int i = 0; i <this.tbl_matriz_original.getRowCount(); i++) {
-            
+        for (int i = 0; i < this.tbl_matriz_original.getRowCount(); i++) {
+
             for (int j = 0; j < 2; j++) {
                 for (int k = 0; k < 2; k++) {
                     matriz_resultado[i][j] += matriz_usuario[i][k] * matriz_rotacion[k][j];
@@ -349,7 +352,8 @@ public class Matrices extends javax.swing.JDialog {
 
             for (int j = 0; j < 2; j++) {
 
-                this.tbl_matriz_resultado.setValueAt(Integer.parseInt(this.tbl_matriz_original.getValueAt(i, j).toString()) * escalar, i, j);
+                this.tbl_matriz_resultado.setValueAt(Integer.parseInt(
+                this.tbl_matriz_original.getValueAt(i, j).toString()) * escalar, i, j);
 
             }
         }
@@ -358,10 +362,10 @@ public class Matrices extends javax.swing.JDialog {
     public void igualar_tamaño_matrices() {
         DefaultTableModel modelPrincipal = (DefaultTableModel) this.tbl_matriz_original.getModel();
         DefaultTableModel modelResultado = (DefaultTableModel) this.tbl_matriz_resultado.getModel();
-        
+
         int filas = modelPrincipal.getRowCount();
         for (int i = 0; i < filas; i++) {
-            
+
             modelResultado.addRow(new Object[]{"", "", ""});
         }
     }

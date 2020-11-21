@@ -18,6 +18,7 @@ public class Derivadas extends javax.swing.JDialog {
     /**
      * Creates new form Derivadas
      */
+    //definir objetos nativos de la api jep
     private DJep djep;
     private Node nodoFuncion;
     private Node nodoDeivada;
@@ -126,29 +127,29 @@ public class Derivadas extends javax.swing.JDialog {
     private void btn_derivarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_derivarActionPerformed
         // TODO add your handling code here:
         String expresion=this.txt_funcion.getText();//guardamos la funcion 
-        this.txt_derivada.setText(funcion_derivada(expresion));
+        this.txt_derivada.setText(funcion_derivada(expresion));//mostras el resultado de la funcion derivada
     }//GEN-LAST:event_btn_derivarActionPerformed
-    public String funcion_derivada(String expresion){
+    public String funcion_derivada(String expresion){//esta es la funcion que deriva
         String resultado="";
         try{
             this.djep =new DJep();//instanciamos formalmente el objeto
             this.djep.addStandardConstants();//agregamos las funciones estandar
-            this.djep.addStandardFunctions();
+            this.djep.addStandardFunctions();//agregas las contastes estandar
             this.djep.setAllowUndeclared(true);//permitimos variables que no se hallan declarado
             this.djep.setAllowAssignment(true);//valores sin declarar
             this.djep.setImplicitMul(true);//agregamos reglas estandar de diferenciacion
             
-            this.nodoFuncion=this.djep.parse(expresion);
+            this.nodoFuncion=this.djep.parse(expresion);//le pasas el parametro de la expresion a derivar
             
             //creamos un nuevo nodo
-            Node diff=this.djep.differentiate(nodoFuncion,"x");
-            this.nodoDeivada=this.djep.simplify(diff);
+            Node diff=this.djep.differentiate(nodoFuncion,"x");//indicas la funcion y la variable a buscar
+            this.nodoDeivada=this.djep.simplify(diff);//guardas el resultado
             //convertimos esta funcion en un string
-            resultado=this.djep.toString(this.nodoDeivada);
+            resultado=this.djep.toString(this.nodoDeivada);//lo concertis a texto
         }catch(Exception ex){
             JOptionPane.showMessageDialog(null, ex);//hacemos visible la exception
         }
-        return resultado;
+        return resultado;//retonrnar
     }
     /**
      * @param args the command line arguments

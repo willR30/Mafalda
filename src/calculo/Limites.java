@@ -224,15 +224,16 @@ public class Limites extends javax.swing.JDialog {
 
     private void btn_evaluarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_evaluarActionPerformed
         // TODO add your handling code here:
+        //validamos que los campos no esten nulos
         if(this.txt_funcion.getText().isEmpty() || this.txt_variable.getText().isEmpty()){
             JOptionPane.showMessageDialog(null, "No se admiten campos nulos");
         }else{
             expresion=this.txt_funcion.getText();//obtenemos el texto de la funcion
-            //evaluamos la funcion por la izquiera
+            //parametros a evaluar
             double v_1=0.99;
             double v_2=0.50;
             double v_3=0.01;
-
+           //lees el valor de X
            double X=Double.parseDouble(this.txt_variable.getText().trim());
 
            //resolvemos por la izquierda
