@@ -53,7 +53,7 @@ public class Matrices extends javax.swing.JDialog {
         jPanel1.setBackground(new java.awt.Color(40, 40, 40));
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        btn_add_fila.setBackground(new java.awt.Color(81, 156, 254));
+        btn_add_fila.setBackground(new java.awt.Color(94, 23, 235));
         btn_add_fila.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         btn_add_fila.setForeground(new java.awt.Color(255, 255, 255));
         btn_add_fila.setText("Add fila");
@@ -63,7 +63,7 @@ public class Matrices extends javax.swing.JDialog {
             }
         });
 
-        btn_eliminar_fila.setBackground(new java.awt.Color(81, 156, 254));
+        btn_eliminar_fila.setBackground(new java.awt.Color(94, 23, 235));
         btn_eliminar_fila.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         btn_eliminar_fila.setForeground(new java.awt.Color(255, 255, 255));
         btn_eliminar_fila.setText("Eliminar");
@@ -85,7 +85,7 @@ public class Matrices extends javax.swing.JDialog {
         tbl_matriz_resultado.setRowHeight(22);
         jScrollPane2.setViewportView(tbl_matriz_resultado);
 
-        btn_rotar.setBackground(new java.awt.Color(81, 156, 254));
+        btn_rotar.setBackground(new java.awt.Color(94, 23, 235));
         btn_rotar.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         btn_rotar.setForeground(new java.awt.Color(255, 255, 255));
         btn_rotar.setText("Rotar");
@@ -95,7 +95,7 @@ public class Matrices extends javax.swing.JDialog {
             }
         });
 
-        btn_trasladar.setBackground(new java.awt.Color(81, 156, 254));
+        btn_trasladar.setBackground(new java.awt.Color(94, 23, 235));
         btn_trasladar.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         btn_trasladar.setForeground(new java.awt.Color(255, 255, 255));
         btn_trasladar.setText("Trasladar");
@@ -118,7 +118,7 @@ public class Matrices extends javax.swing.JDialog {
         tbl_matriz_original.setRowHeight(22);
         jScrollPane1.setViewportView(tbl_matriz_original);
 
-        btn_escalar.setBackground(new java.awt.Color(81, 156, 254));
+        btn_escalar.setBackground(new java.awt.Color(94, 23, 235));
         btn_escalar.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         btn_escalar.setForeground(new java.awt.Color(255, 255, 255));
         btn_escalar.setText("Escalar");

@@ -64,7 +64,7 @@ public class Derivadas extends javax.swing.JDialog {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Funcion derivada");
 
-        btn_derivar.setBackground(new java.awt.Color(81, 156, 254));
+        btn_derivar.setBackground(new java.awt.Color(94, 23, 235));
         btn_derivar.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         btn_derivar.setForeground(new java.awt.Color(255, 255, 255));
         btn_derivar.setText("Derivar");
