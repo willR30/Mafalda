@@ -60,7 +60,7 @@ public class Funciones extends javax.swing.JDialog {
         jPanel1.setBackground(new java.awt.Color(40, 40, 40));
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jButton1.setBackground(new java.awt.Color(81, 156, 254));
+        jButton1.setBackground(new java.awt.Color(94, 23, 235));
         jButton1.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Graficar");
@@ -106,7 +106,7 @@ public class Funciones extends javax.swing.JDialog {
         txt_valor_evaluado.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         txt_valor_evaluado.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
 
-        jButton2.setBackground(new java.awt.Color(81, 156, 254));
+        jButton2.setBackground(new java.awt.Color(94, 23, 235));
         jButton2.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("Evaluar");

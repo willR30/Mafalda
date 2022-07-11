@@ -23,8 +23,7 @@ public class Home extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
         this.setResizable(false);
-        this.setTitle("Home");
-        this.btn_aplicaciones.setVisible(false);
+        this.setTitle("Mafalda");
     }
 
     /**
@@ -37,7 +36,6 @@ public class Home extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        btn_aplicaciones = new javax.swing.JButton();
         btn_funciones = new javax.swing.JButton();
         btn_matrizes = new javax.swing.JButton();
         btn_derivadas = new javax.swing.JButton();
@@ -48,60 +46,52 @@ public class Home extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(40, 40, 40));
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        btn_aplicaciones.setBackground(new java.awt.Color(81, 156, 254));
-        btn_aplicaciones.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
-        btn_aplicaciones.setForeground(new java.awt.Color(255, 255, 255));
-        btn_aplicaciones.setText("Aplicaciones");
-        btn_aplicaciones.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        btn_aplicaciones.setBorderPainted(false);
-        btn_aplicaciones.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_aplicacionesActionPerformed(evt);
-            }
-        });
-
-        btn_funciones.setBackground(new java.awt.Color(81, 156, 254));
+        btn_funciones.setBackground(new java.awt.Color(94, 23, 235));
         btn_funciones.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         btn_funciones.setForeground(new java.awt.Color(255, 255, 255));
         btn_funciones.setText("Funciones");
         btn_funciones.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btn_funciones.setBorderPainted(false);
+        btn_funciones.setFocusPainted(false);
         btn_funciones.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_funcionesActionPerformed(evt);
             }
         });
 
-        btn_matrizes.setBackground(new java.awt.Color(81, 156, 254));
+        btn_matrizes.setBackground(new java.awt.Color(94, 23, 235));
         btn_matrizes.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         btn_matrizes.setForeground(new java.awt.Color(255, 255, 255));
         btn_matrizes.setText("Matrices");
         btn_matrizes.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btn_matrizes.setBorderPainted(false);
+        btn_matrizes.setFocusPainted(false);
         btn_matrizes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_matrizesActionPerformed(evt);
             }
         });
 
-        btn_derivadas.setBackground(new java.awt.Color(81, 156, 254));
+        btn_derivadas.setBackground(new java.awt.Color(94, 23, 235));
         btn_derivadas.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         btn_derivadas.setForeground(new java.awt.Color(255, 255, 255));
         btn_derivadas.setText("Derivadas");
         btn_derivadas.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btn_derivadas.setBorderPainted(false);
+        btn_derivadas.setFocusPainted(false);
         btn_derivadas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_derivadasActionPerformed(evt);
             }
         });
 
-        btn_limites.setBackground(new java.awt.Color(81, 156, 254));
+        btn_limites.setBackground(new java.awt.Color(94, 23, 235));
         btn_limites.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         btn_limites.setForeground(new java.awt.Color(255, 255, 255));
         btn_limites.setText("Limites");
         btn_limites.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btn_limites.setBorderPainted(false);
+        btn_limites.setFocusPainted(false);
         btn_limites.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_limitesActionPerformed(evt);
@@ -112,28 +102,23 @@ public class Home extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(30, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(21, 21, 21)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(btn_limites, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(78, 78, 78)
-                                .addComponent(btn_derivadas, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(btn_matrizes, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(78, 78, 78)
-                                .addComponent(btn_funciones, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addComponent(btn_limites, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(78, 78, 78)
+                        .addComponent(btn_derivadas, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(151, 151, 151)
-                        .addComponent(btn_aplicaciones, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(19, Short.MAX_VALUE))
+                        .addComponent(btn_matrizes, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(78, 78, 78)
+                        .addComponent(btn_funciones, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(26, 26, 26))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(58, 58, 58)
+                .addGap(47, 47, 47)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btn_matrizes, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btn_funciones, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -141,20 +126,20 @@ public class Home extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btn_limites, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btn_derivadas, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(btn_aplicaciones)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(68, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(0, 0, 0))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 252, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -182,11 +167,6 @@ public class Home extends javax.swing.JFrame {
         // TODO add your handling code here:
         new Limites(new javax.swing.JFrame(),true).setVisible(true);//hacemo visible la ventana
     }//GEN-LAST:event_btn_limitesActionPerformed
-
-    private void btn_aplicacionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_aplicacionesActionPerformed
-        // TODO add your handling code here:
-        new Aplicaciones(new javax.swing.JFrame(),true).setVisible(true);
-    }//GEN-LAST:event_btn_aplicacionesActionPerformed
 
     /**
      * @param args the command line arguments
@@ -224,7 +204,6 @@ public class Home extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btn_aplicaciones;
     private javax.swing.JButton btn_derivadas;
     private javax.swing.JButton btn_funciones;
     private javax.swing.JButton btn_limites;

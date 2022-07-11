@@ -67,7 +67,7 @@ public class Limites extends javax.swing.JDialog {
         txt_funcion.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         txt_funcion.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
 
-        btn_evaluar.setBackground(new java.awt.Color(81, 156, 254));
+        btn_evaluar.setBackground(new java.awt.Color(94, 23, 235));
         btn_evaluar.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         btn_evaluar.setForeground(new java.awt.Color(255, 255, 255));
         btn_evaluar.setText("Evaluar");
